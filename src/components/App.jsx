@@ -6,7 +6,7 @@ import Filter from './Filter/Filter';
 import ContactsList from './ContactsList/ContactsList';
 
 class App extends Component {
-  static defaultProps = {
+  state = {
     contacts: [
       { id: 'id-1', name: 'Rosie Simpson', number: '459-12- 56' },
       { id: 'id-2', name: 'Hermione Kline', number: '443-89- 12' },
@@ -14,11 +14,6 @@ class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91- 26' },
     ],
     filter: '',
-  };
-
-  state = {
-    contacts: this.props.contacts,
-    filter: this.props.filter,
   };
 
   componentDidMount() {
